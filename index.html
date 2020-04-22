@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+  <title>Survey Webpage</title>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<link rel="stylesheet" href="assets/css/style.css" >
+
+<script type="text/javascript" src="assets/js/base.js"></script>
+<script type="text/javascript" src="assets/js/modules/suspect.js"></script>
+ 
+
+
+
+
+
+  </head>
+  <body>
+  	<div class=" " style="">
+	  	<div class="col-md-10 col-md-offset-1 wrap-suspects">
+	  		<div class="suspect-item col-md-2"><img data-id="1" class="img-rounded img-suspect"  src="assets/images/img1.jpg"></div>
+	  		<div class="suspect-item col-md-2 "><img data-id="2" class="img-rounded img-suspect"  src="assets/images/img2.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="3" class="img-rounded img-suspect"  src="assets/images/img3.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="4" class="img-rounded img-suspect"  src="assets/images/img4.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="5" class="img-rounded img-suspect"  src="assets/images/img5.jpg"></div>
+	  		<div class="suspect-item col-md-2"><img data-id="6" class="img-rounded img-suspect"  src="assets/images/img6.jpg"></div>
+	  	</div>
+      <div style="clear: both"></div>
+      <div class="pull-right wrap-btn-confirm"><button disabled="disabled" type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#confirm-modal">
+  Confirm
+</button></div>
+  	</div>
+     <div style="clear: both"></div>
+     
+
+  	<div id="dropable-wrap">
+  		<div class="dropable-item" data-likely="1"><div class="inner-drop"><ul></ul></div></div>
+      <!-- <div class="dropable-item" data-likely="2"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="3"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="4"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="5"><div class="inner-drop"><ul></ul></div></div>
+      <div class="dropable-item" data-likely="6"><div class="inner-drop"><ul></ul></div></div> -->
+
+      
+  		
+  	</div>
+    <div id="grad1"><span id="most-likely">Most Likely</span><span id="least-likely">Least Likely</span></div>
+
+
+   <div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>How confident are you about your most likely choice?</p>
+              <div id="slider-cf"></div>
+              <span id="min-text"></span>
+
+              <div class="" style="height: 20px"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary btn-confirm">Confirm</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Image</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row list-image-modal">
+                  
+              </div>
+
+              <div class="" style="height: 20px"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+
+
+  <script type="text/javascript">
+  	(function ($, app) {
+
+
+  		 app.getCls('suspect').init();
+
+  	})($, $.app);
+  </script>
+</html>

@@ -5,7 +5,7 @@
 }
 
 .img-suspect{
-	width: 100px;
+	width: 175px;
 }
 
 .dropable-item {
@@ -24,13 +24,13 @@
   
 }
 
-.inner-drop { position: relative; height: 100%;}
+.inner-drop { position: relative; height: 800%;}
 .inner-drop ul { position: absolute; bottom: 0 }
 .inner-drop  li { display: block; list-style: none }
 
 #grad1{
 
-  height: 20px;
+  height: 200px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, red , yellow, grey); /* Standard syntax (must be*/
   position: fixed;
@@ -54,6 +54,7 @@
 .wrap-btn-confirm{
 	margin-right: 30px;
 	margin-bottom: 10px;
+	position: static;
 }
 
 #min-text {
